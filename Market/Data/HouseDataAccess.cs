@@ -7,9 +7,21 @@ namespace Market.Data
     public class HouseDataAccess : DbDataAccess<House>
     {
         public override void Delete(House entity) { }
-        public override void Update(House entity) { }
+        public override void Insert(House entity) { }
+        public override void Update(House entity, string updateColumn, string value)
+        {
+            var selectSqlScript = $"UPDATE Houses SET {updateColumn} = {value} WHERE Id = '{entity.Id}'";
 
-        public override ICollection<House> SelectBy(double area, int price, int roomsCount, int page)
+            var command = factory.CreateCommand();
+            command.CommandText = selectSqlScript;
+            command.Connection = connection;
+
+            command.ExecuteNonQuery();
+            command.Dispose();
+
+        }
+
+        public ICollection<House> SelectBy(double area, int price, int roomsCount, int page)
         {
             var selectSqlScript = $"select * from Houses where Area >= {area} and RoomsCount >= {roomsCount} and Price <= {price} order by Price offset {page * _rows} rows fetch next {_rows} rows only";
 

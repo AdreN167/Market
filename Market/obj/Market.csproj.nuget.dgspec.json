@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\www\\Desktop\\STEP_lessons\\ADO.NET\\Модуль 2 Уровни подключения\\part 3\\Market\\Market\\Market.csproj": {}
+    "C:\\Users\\Игорь Поливин\\Source\\Repos\\NewMarket\\Market\\Market.csproj": {}
   },
   "projects": {
-    "C:\\Users\\www\\Desktop\\STEP_lessons\\ADO.NET\\Модуль 2 Уровни подключения\\part 3\\Market\\Market\\Market.csproj": {
+    "C:\\Users\\Игорь Поливин\\Source\\Repos\\NewMarket\\Market\\Market.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\www\\Desktop\\STEP_lessons\\ADO.NET\\Модуль 2 Уровни подключения\\part 3\\Market\\Market\\Market.csproj",
+        "projectUniqueName": "C:\\Users\\Игорь Поливин\\Source\\Repos\\NewMarket\\Market\\Market.csproj",
         "projectName": "Market",
-        "projectPath": "C:\\Users\\www\\Desktop\\STEP_lessons\\ADO.NET\\Модуль 2 Уровни подключения\\part 3\\Market\\Market\\Market.csproj",
-        "packagesPath": "C:\\Users\\www\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\www\\Desktop\\STEP_lessons\\ADO.NET\\Модуль 2 Уровни подключения\\part 3\\Market\\Market\\obj\\",
+        "projectPath": "C:\\Users\\Игорь Поливин\\Source\\Repos\\NewMarket\\Market\\Market.csproj",
+        "packagesPath": "C:\\Users\\Игорь Поливин\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Игорь Поливин\\Source\\Repos\\NewMarket\\Market\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\www\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Игорь Поливин\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
@@ -46,9 +48,25 @@
               "target": "Package",
               "version": "[6.0.0-preview.1.21102.12, )"
             },
+            "Qiwi": {
+              "target": "Package",
+              "version": "[1.0.12, )"
+            },
+            "Qiwi.BillPayments": {
+              "target": "Package",
+              "version": "[0.1.5, )"
+            },
+            "QiwiApi": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
             "System.Data.SqlClient": {
               "target": "Package",
               "version": "[4.8.2, )"
+            },
+            "Twilio": {
+              "target": "Package",
+              "version": "[5.56.0, )"
             }
           },
           "imports": [
@@ -66,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
         }
       }
     }

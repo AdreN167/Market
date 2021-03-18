@@ -29,8 +29,12 @@ namespace Market.Data
             connection.Close();
         }
 
-        public abstract void Update(T entity);
+        public abstract void Update(T entity, string updateColumn, string value);
         public abstract void Delete(T entity);
-        public abstract ICollection<T> SelectBy(double area, int price, int roomsCount, int page);
+        public abstract void Insert(T Entity);
+
+
+
+        //public abstract ICollection<T> SelectBy(double area, int price, int roomsCount, int page);
     }
 }

@@ -7,9 +7,20 @@ namespace Market.Data
     public class FlatDataAccess : DbDataAccess<Flat>
     {
         public override void Delete(Flat entity) { }
-        public override void Update(Flat entity) { }
+        public override void Insert(Flat entity) { }
+        public override void Update(Flat entity, string updateColumn, string value)
+        {
+            var selectSqlScript = $"UPDATE Flats SET {updateColumn} = {value} WHERE Id = '{entity.Id}'";
 
-        public override ICollection<Flat> SelectBy(double area, int price, int roomsCount, int page)
+            var command = factory.CreateCommand();
+            command.CommandText = selectSqlScript;
+            command.Connection = connection;
+
+            command.ExecuteNonQuery();
+            command.Dispose();
+        }
+
+        public ICollection<Flat> SelectBy(double area, int price, int roomsCount, int page)
         {
             var selectSqlScript = $"select * from Flats where Area >= {area} and RoomsCount >= {roomsCount} and Price <= {price} order by Price offset {page * _rows} rows fetch next {_rows} rows only";
 
